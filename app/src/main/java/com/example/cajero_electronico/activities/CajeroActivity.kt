@@ -1,6 +1,7 @@
 package com.example.cajero_electronico.activities
 
 import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
 import android.util.Log
@@ -25,6 +26,7 @@ class CajeroActivity : ComponentActivity() {
         lblSaldoDispo = findViewById(R.id.lblSaldoDispo)
         val btn_consignar = findViewById<Button>(R.id.btnConsignar)
         val btn_retirar = findViewById<Button>(R.id.btnRetirar)
+        val btn_eliminar_cuenta = findViewById<Button>(R.id.btnEliminarCuenta)
 
         val shared = getSharedPreferences("CajeroData", MODE_PRIVATE)
         val usuario = shared.getString("key_usuario", "Usuario") ?: "Usuario"
@@ -39,6 +41,7 @@ class CajeroActivity : ComponentActivity() {
 
         btn_retirar.setOnClickListener { mostrarCuadro("RETIRO") }
         btn_consignar.setOnClickListener { mostrarCuadro("CONSIGNACION") }
+        btn_eliminar_cuenta.setOnClickListener { eliminarCuenta() }
     }
 
     private fun mostrarCuadro(tipo: String){
@@ -82,5 +85,16 @@ class CajeroActivity : ComponentActivity() {
 
     private fun refreshInterfaz(){
         lblSaldoDispo.text = "$${elUsuario.saldo}"
+    }
+
+    private fun eliminarCuenta(){
+        val shared = getSharedPreferences("CajeroData", MODE_PRIVATE)
+        shared.edit().clear().apply()
+
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
+
+        Toast.makeText(this, "Datos eliminados. Puedes registrarte de nuevo.", Toast.LENGTH_SHORT).show()
     }
 }

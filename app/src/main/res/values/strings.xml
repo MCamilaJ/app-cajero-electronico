@@ -12,4 +12,5 @@
     <string name="btn_consignar">Consignar</string>
     <string name="btn_retirar">Retirar</string>
     <string name="lblHola">Hola,</string>
+    <string name="btn_eliminar_cuenta">Eliminar cuenta</string>
 </resources>

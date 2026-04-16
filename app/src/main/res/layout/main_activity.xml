@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fdfaeb">
+
+    <TextView
+        android:id="@+id/lblBienvenido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:text="@string/lbl_bienvenido"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#3b3f49"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblInformacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="@string/lbl_informacion"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#3b3f49"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblBienvenido" />
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="158dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="532dp"
+        android:background="@drawable/boton_redondo"
+        android:text="@string/btn_ingresar"
+        android:textColor="#fdfaeb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inpUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginTop="352dp"
+        android:ems="10"
+        android:hint="@string/inp_usuario"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColorHint="#3b3f49"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inpContrasenia"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginTop="428dp"
+        android:ems="10"
+        android:hint="@string/inp_contraseña"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:textColorHint="#3b3f49"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

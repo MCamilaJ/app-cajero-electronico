@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">cajero-electronico</string>
+    <string name="lbl_bienvenido">Bienvenido a su cajero electrónico</string>
+    <string name="lbl_informacion">Digite sus datos para ingresar al cajero</string>
+    <string name="btn_ingresar">Ingresar</string>
+    <string name="inp_contraseña">Contraseña</string>
+    <string name="inp_usuario">Usuario</string>
+    <string name="title_activity_cajero">CajeroActivity</string>
+    <string name="lbl_saludo">Hola, señor usuario</string>
+    <string name="lbl_saldo">Saldo disponible</string>
+    <string name="lbl_transacciones">Transacciones disponibles</string>
+    <string name="btn_consignar">Consignar</string>
+    <string name="btn_retirar">Retirar</string>
+    <string name="lblHola">Hola,</string>
+</resources>
